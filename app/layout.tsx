@@ -7,8 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Dev threads",
   description: "T-Shirt store for developers",
-  keywords: "t-shirt, developer, store",
-};
+  keywords: "t-shirt, developer, store",};
 
 export default function RootLayout({
   children,
