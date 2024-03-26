@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import Link from "next/link";
 
@@ -21,10 +21,16 @@ import { MdClose } from "react-icons/md";
 
 import { TbBracketsAngle } from "react-icons/tb";
 
-const Navbar = () => {
+import { User } from "@prisma/client";
+
+interface NavBarProps {
+  user: User;
+}
+
+const Navbar:React.FC<NavBarProps> = ({ user }) => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [openUserMenu, setOpenUserMenu] = useState(false);
-  const [user, setUser] = useState(false);
+  // const [user, setUser] = useState(false);
 
   const mobileMenuHandler = () => {
     setOpenMobileMenu(!openMobileMenu);
