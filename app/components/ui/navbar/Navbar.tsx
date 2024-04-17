@@ -22,6 +22,7 @@ import { MdClose } from "react-icons/md";
 import { TbBracketsAngle } from "react-icons/tb";
 
 import { User } from "@prisma/client";
+import CartIcon from "@/app/(soppingcart)/components/ui/CartIcon";
 
 interface NavBarProps {
   user: User;
@@ -57,7 +58,7 @@ const Navbar:React.FC<NavBarProps> = ({ user }) => {
           ))}
         </ul>
         <div className="flex gap-5 text-xl [&>*]:cursor-pointer">
-          <AiOutlineShoppingCart />
+         <CartIcon />
           <AiOutlineHeart />
           <div className="max-md:hidden" onClick={userMenuHandler}>
             <AiOutlineUser />
